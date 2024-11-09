@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "strict": true,
+        "isolatedModules": true,
+        "target": "ESNext",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./resources/js/*"],
+            "vendor/*": ["./vendor/*"]
+        }
+    },
+    "include": [
+        "resources/js/**/*.ts",
+        "resources/js/**/*.js",
+        "resources/js/**/*.tsx",
+        "resources/js/**/*.jsx",
+        "resources/js/**/*.d.ts",
+        "vendor/mxent/*/resources/js/**/*.ts",
+        "vendor/mxent/*/resources/js/**/*.js",
+        "vendor/mxent/*/resources/js/**/*.tsx",
+        "vendor/mxent/*/resources/js/**/*.jsx",
+        "vendor/mxent/*/resources/js/**/*.d.ts"
+    ]
+}
+

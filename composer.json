@@ -1,0 +1,30 @@
+{
+    "name": "mxent/stack",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mxent\\Stack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mikkiesco",
+            "email": "mikkiescorido@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mxent\\Stack\\Providers\\StackServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18"
+    },
+    "require": {
+        "laravel/prompts": "^0.3.1"
+    }
+}

@@ -1,0 +1,44 @@
+<?php
+namespace VendorName\ModuleName\Providers;
+
+use Illuminate\Support\Facades\Vite;
+use Illuminate\Support\ServiceProvider;
+use VendorName\ModuleName\Providers\RouteServiceProvider;
+
+class ModuleNameServiceProvider extends ServiceProvider
+{
+
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'modulename');
+        $this->publishes([
+            __DIR__ . '/../../config/module-name.php' => config_path('module-name.php'),
+        ], 'module-name-config');
+        $this->publishes([
+            __DIR__.'/../../database/migrations/' => database_path('migrations')
+        ], 'module-name-migrations');
+        $this->publishes([
+            __DIR__.'/../../resources/lang' => $this->app->langPath('vendor/module-name'),
+        ], 'module-name-lang');
+        $this->publishes([
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/module-name'),
+        ], 'module-name-views');
+        $this->publishes([
+            __DIR__.'/../../resources/js' => resource_path('js/vendor/module-name'),
+        ], 'module-name-js');
+        $this->publishes([
+            __DIR__.'/../../resources/css' => resource_path('css/vendor/module-name'),
+        ], 'module-name-css');
+
+        Vite::prefetch(concurrency: 3);
+    }
+
+    public function register()
+    {
+        $this->app->register(RouteServiceProvider::class);
+        $this->mergeConfigFrom(__DIR__.'/../../config/module-name.php', 'modulename');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'modulename');
+    }
+
+}

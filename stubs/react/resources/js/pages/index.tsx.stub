@@ -1,0 +1,10 @@
+export default function Home() {
+  return (
+    <>
+      <div className="p-3">
+        <div className="font-bold mb-3">ModuleName</div>
+        <p>Just another module created using mxent/stack.</p>
+      </div>
+    </>
+  )
+}

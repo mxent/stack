@@ -1,0 +1,5 @@
+<?php
+
+use VendorName\ModuleName\Http\Controllers\ModuleNameController;
+
+Route::get('/', [ModuleNameController::class, 'index'])->name('index');
