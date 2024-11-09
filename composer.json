@@ -1,5 +1,6 @@
 {
     "name": "mxent/stack",
+    "description": "Opinionated Modular Stack for Laravel",
     "type": "library",
     "license": "MIT",
     "autoload": {

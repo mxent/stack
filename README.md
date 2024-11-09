@@ -1,6 +1,6 @@
 # Mxent Stack
 
-Opinionated Modular Stack
+Opinionated Modular Stack for Laravel
 
 ### Installation
 
