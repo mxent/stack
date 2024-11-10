@@ -64,7 +64,7 @@ class HandleInertiaRequests extends Middleware
         $currentDirBits = explode($basePath, $currentDir);
         $componentPath = $currentDirBits[count($currentDirBits) - 1].'/resources/js/pages/'.$component;
 
-        return Inertia::render($componentPath, $props);
+        return Inertia::render($componentPath, array_merge($this->share($request), $props));
     }
 
 }
