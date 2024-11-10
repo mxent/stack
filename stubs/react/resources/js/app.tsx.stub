@@ -21,7 +21,7 @@ for (const key in components) {
 createInertiaApp({
     title: title => (title ? `${title} - ${appName}` : appName),
     resolve: name => {
-        return components[`${name}.tsx`]();
+        return components[`./pages/${name}.tsx`]();
     },
     setup({ el, App, props }) {
         createRoot(el).render(
