@@ -24,7 +24,7 @@ class ModuleNameController extends Controller implements HasMiddleware
      */
     public function index()
     {
-        return inertia('index');
+        return inertia('module-name/index');
     }
 
 }

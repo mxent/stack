@@ -203,7 +203,7 @@ class InitCommand extends Command
         ];
 
         $npmDevInstalls = [
-            '@inertiajs/react' => null,
+            '@inertiajs/react' => 'next',
             '@vitejs/plugin-react' => null,
             'react' => null,
             'react-dom' => null,
