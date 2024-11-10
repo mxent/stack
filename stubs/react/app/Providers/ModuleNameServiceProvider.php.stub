@@ -16,8 +16,11 @@ class ModuleNameServiceProvider extends ServiceProvider
             __DIR__ . '/../../config/module-name.php' => config_path('module-name.php'),
         ], 'module-name-config');
         $this->publishes([
-            __DIR__.'/../../database/migrations/' => database_path('migrations')
+            __DIR__.'/../../database/migrations' => database_path('migrations')
         ], 'module-name-migrations');
+        $this->publishes([
+            __DIR__.'/../../database/seeders' => database_path('seeders'),
+        ], 'module-name-seeders');
         $this->publishes([
             __DIR__.'/../../resources/lang' => $this->app->langPath('vendor/module-name'),
         ], 'module-name-lang');
