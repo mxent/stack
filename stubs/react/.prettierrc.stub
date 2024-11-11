@@ -13,5 +13,6 @@
                 "resources/**/*.{js,mjs,cjs,ts,jsx,tsx}"
             ]
         }
-    ]
+    ],
+    "plugins": ["prettier-plugin-tailwindcss"]
 }
