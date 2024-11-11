@@ -2,6 +2,9 @@
 
 Opinionated Modular Stack for Laravel
 
+> [!IMPORTANT]
+> It is recommended to use this package with a fresh Laravel installation.
+
 ### Installation
 
 ```php
@@ -9,9 +12,6 @@ composer require mxent/stack
 ```
 
 ### Usage
-
-> [!IMPORTANT]
-> It is recommended to run the following command on a fresh Laravel installation.
 
 ```php
 php artisan mxent:init
