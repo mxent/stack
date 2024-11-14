@@ -222,6 +222,7 @@ class InitCommand extends Command
             'eslint-plugin-react' => null,
             'vitest' => null,
             'prettier-plugin-tailwindcss' => null,
+            'daisyui' => null,
         ];
 
         $npmInstalls = [
