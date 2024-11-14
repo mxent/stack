@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@/components/theme-provider';
 import { createInertiaApp } from '@inertiajs/react';
 import { createRoot } from 'react-dom/client';
 import '../css/app.css';
@@ -24,12 +23,6 @@ createInertiaApp({
         return components[`./pages/${name}.tsx`]();
     },
     setup({ el, App, props }) {
-        createRoot(el).render(
-            <>
-                <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-                    <App {...props} />
-                </ThemeProvider>
-            </>
-        );
+        createRoot(el).render(<App {...props} />);
     },
 });
