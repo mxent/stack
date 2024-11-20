@@ -8,7 +8,7 @@
     @vite('resources/js/app.tsx')
     @inertiaHead
   </head>
-  <body class="h-full">
+  <body class="antialiased h-full">
     @inertia
   </body>
 </html>
