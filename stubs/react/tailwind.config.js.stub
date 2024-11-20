@@ -1,28 +1,16 @@
-import daisyui from 'daisyui';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: 'selector',
     content: [
         './resources/**/*.{ts,tsx,js,jsx,php,html}',
         './vendor/vendor-name/*/resources/**/*.{ts,tsx,js,jsx,php,html}',
     ],
     theme: {
         fontFamily: {
-            sans: [
-                //
-                ...defaultTheme.fontFamily.sans
-            ],
-            mono: [
-                //
-                ...defaultTheme.fontFamily.mono
-            ],
+            sans: [...defaultTheme.fontFamily.sans],
+            mono: [...defaultTheme.fontFamily.mono],
         },
-    },
-    plugins: [daisyui],
-    daisyui: {
-        themes: ['light', 'dark'],
     },
 };
 
